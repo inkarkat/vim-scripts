@@ -19,7 +19,7 @@ elseif exists("b:current_syntax")
   finish
 endif
 
-syn region svnRegion    start="^--.*--$" end="\%$" contains=ALL contains=@NoSpell
+syn region svnRegion    start="^--.*--$" end="\%$" contains=svnRemoved,svnRenamed,svnAdded,svnModified,svnProperty contains=@NoSpell
 syn match svnRemoved    "^D    .*$" contained contains=@NoSpell
 syn match svnRenamed    "^R[ M][ U][ +] .*$" contained contains=@NoSpell
 syn match svnAdded      "^A[ M][ U][ +] .*$" contained contains=@NoSpell
